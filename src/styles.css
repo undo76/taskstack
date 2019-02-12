@@ -1,0 +1,108 @@
+body {
+  /* background-image: linear-gradient(hsl(90, 10%, 30%), hsl(90, 0%, 25%)); */
+  background-image: linear-gradient(hsl(291, 100%, 22%), hsl(0, 70%, 43%));
+  color: hsl(90, 90%, 10%);
+}
+
+.App {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif, sans-serif;
+  box-sizing: border-box;
+  min-height: 100vh;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.App__title {
+  color: hsl(90, 80%, 30%);
+  font-size: 32px;
+  margin: 22em 0;
+  text-shadow: 0 1px 1px hsla(0, 0%, 0%, 0.3);
+}
+
+.Block {
+  box-sizing: border-box;
+  padding: 1em calc(1em - 5px);
+
+  background-color: hsla(90, 10%, 100%, 0.85);
+  border-radius: 0.1rem;
+  box-shadow: 0 1px 1px hsla(0, 0%, 0%, 0.2), 0 1px 5px hsla(0, 0%, 0%, 0.3);
+  transition: all 0.2s;
+  border-left: 5px solid hsl(80, 50%, 30%);
+}
+
+.Block:hover,
+.Block--active {
+  box-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.1), 0 2px 20px hsla(0, 0%, 0%, 0.2);
+  background: hsl(65, 20%, 95%);
+}
+
+.Block__header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: baseline;
+  justify-content: flex-end;
+}
+
+.Block__title {
+  flex: 1 1 auto;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.BlockActions {
+  flex: 0 0 auto;
+  /* visibility: hidden; */
+}
+
+.Block:hover > * > .BlockActions {
+  visibility: visible;
+}
+
+.Block + .Block {
+  margin-top: 0.3em;
+}
+
+.TaskForm {
+  margin-bottom: 1em;
+  display: flex;
+}
+
+.TaskForm__input {
+  all: unset;
+  flex: 1 1 auto;
+  display: block;
+  font-size: 16px;
+  padding: 1em;
+  background: hsl(90, 10%, 95%);
+  border-radius: 0.3em 0 0 0.3em;
+
+  box-shadow: inset 1px 1px 2px hsla(0, 0%, 0%, 0.3);
+}
+
+.TaskForm__input:focus {
+  background: white;
+}
+
+.TaskForm__button {
+  all: unset;
+  background: hsl(90, 90%, 80%);
+  padding: 0.5em 1em;
+  border-radius: 0 0.3em 0.3em 0;
+  margin-left: 0;
+  font-weight: bold;
+  color: hsl(90, 90%, 20%);
+  box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.2), 0 1px 10px hsla(0, 0%, 0%, 0.1);
+  transition: all 0.5s;
+}
+
+.TaskForm__button:disabled {
+  background: hsl(90, 20%, 90%);
+  color: hsl(90, 10%, 70%);
+  padding: 0.5em 1em;
+  border-radius: 0 0.3em 0.3em 0;
+  margin-left: 0;
+  font-weight: bold;
+  /* color: hsl(90, 90%, 20%); */
+  box-shadow: inset -1px 1px 3px hsla(0, 0%, 0%, 0.3);
+}
